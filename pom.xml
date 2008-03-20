@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.mule.modules</groupId>
 	<artifactId>mule-module-servingxml</artifactId>
 	<name>ServingXML</name>
-	<description>
-		This project deals with wrapping Serving XML in a transformer to
-		be able to use Serving XML and all its power inside Mule.
-	</description>
+	<description>This project deals with wrapping Serving XML in a transformer to
+		be able to use Serving XML and all its power inside Mule.</description>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<properties>
@@ -18,37 +14,36 @@
 		<shortId>SERVINGXML</shortId>
 		<domainName>servingxml</domainName>
 	</properties>
+	<repositories>
+		<repository>
+			<id>servingxml-transformer.m2</id>
+			<url>http://svn.muleforge.org/servingxml/maven2/</url>
+			<name>ServingXML transformer repository</name>
+		</repository>
+	</repositories>
 	<issueManagement>
 		<system>Jira</system>
 		<url>http://mule.mulesource.org/jira/browse/${shortId}</url>
 	</issueManagement>
 	<scm>
-		<connection>
-			scm:svn:http://svn.muleforge.org/${domainName}/
-		</connection>
-		<developerConnection>
-			scm:svn:https://svn.muleforge.org/${domainName}/
-		</developerConnection>
+		<connection>scm:svn:http://svn.muleforge.org/${domainName}/</connection>
+		<developerConnection>scm:svn:https://svn.muleforge.org/${domainName}/</developerConnection>
 		<tag>HEAD</tag>
 		<url>http://svn.${domainName}.muleforge.org/</url>
 	</scm>
 	<ciManagement>
 		<system>Bamboo</system>
 		<url>http://bamboo.muleforge.org/browse/${shortId}</url>
-		<notifiers />
+		<notifiers/>
 	</ciManagement>
 	<distributionManagement>
 		<repository>
 			<id>muleforge.webdav.releases</id>
-			<url>
-				dav:https://dav.muleforge.org/repository/${domainName}/
-			</url>
+			<url>dav:https://dav.muleforge.org/repository/${domainName}/</url>
 		</repository>
 		<snapshotRepository>
 			<id>muleforge.webdav.snapshots</id>
-			<url>
-				dav:https://dav.muleforge.org/snapshots.repository/${domainName}/
-			</url>
+			<url>dav:https://dav.muleforge.org/snapshots.repository/${domainName}/</url>
 		</snapshotRepository>
 		<site>
 			<id>muleforge.webdav.sites</id>
@@ -86,9 +81,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<configuration>
-					<configLocation>
-						http://www.muleforge.org/download/checkstyle.xml?version=1
-					</configLocation>
+					<configLocation>http://www.muleforge.org/download/checkstyle.xml?version=1</configLocation>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -124,15 +117,9 @@
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<configuration>
 					<links>
-						<link>
-							http://java.sun.com/j2ee/1.4/docs/api
-						</link>
-						<link>
-							http://java.sun.com/j2se/1.4.2/docs/api
-						</link>
-						<link>
-							http://java.sun.com/j2se/1.5.0/docs/api
-						</link>
+						<link>http://java.sun.com/j2ee/1.4/docs/api</link>
+						<link>http://java.sun.com/j2se/1.4.2/docs/api</link>
+						<link>http://java.sun.com/j2se/1.5.0/docs/api</link>
 					</links>
 				</configuration>
 			</plugin>
