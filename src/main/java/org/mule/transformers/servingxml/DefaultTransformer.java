@@ -28,9 +28,13 @@ import com.servingxml.util.system.RuntimeContext;
 
 public class DefaultTransformer extends AbstractTransformer {
 	private static final long serialVersionUID = 8820909385444863910L;
+
 	private Logger log = Logger.getLogger(this.getClass());
+
 	private AppContext appContext = null;
+
 	private Object lock = new Object();
+
 	private String config = null;
 
 	public DefaultTransformer() {
@@ -98,6 +102,12 @@ public class DefaultTransformer extends AbstractTransformer {
 					appContext, this.getName());
 			Service service = (Service) appContext.getResources()
 					.lookupServiceComponent(Service.class, this.getName());
+
+			if (service == null) {
+				throw new ServiceNotFoundException(String.format(
+						"Service %s not found in %s!", this.getName(), this
+								.getConfig()));
+			}
 
 			/* Add some parameters, if any. */
 			ParameterBuilder paramBuilder = new ParameterBuilder();

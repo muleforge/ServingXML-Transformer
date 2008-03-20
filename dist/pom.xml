@@ -30,11 +30,11 @@
 	</distributionManagement>
 	<dependencies>
 		<!-- Add dependencies here -->
-		<dependency>
+		<!--dependency>
 			<groupId>org.mule.tests</groupId>
 			<artifactId>mule-tests-functional</artifactId>
 			<version>${version}</version>
-		</dependency>
+		</dependency-->
 	</dependencies>
 	<build>
 		<defaultGoal>install</defaultGoal>
