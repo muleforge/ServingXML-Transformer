@@ -6,11 +6,15 @@
 	<groupId>org.mule.modules</groupId>
 	<artifactId>mule-module-servingxml</artifactId>
 	<name>ServingXML</name>
-	<description>This project deals with wrapping Serving XML in a transformer to be able to use Serving XML and all its power inside Mule.</description>
+	<description>
+		This project deals with wrapping Serving XML in a transformer to
+		be able to use Serving XML and all its power inside Mule.
+	</description>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<properties>
 		<muleVersion>1.4.1</muleVersion>
+		<servingXmlVersion>0.8.2</servingXmlVersion>
 		<shortId>SERVINGXML</shortId>
 		<domainName>servingxml</domainName>
 	</properties>
@@ -36,11 +40,15 @@
 	<distributionManagement>
 		<repository>
 			<id>muleforge.webdav.releases</id>
-			<url>dav:https://dav.muleforge.org/repository/${domainName}/</url>
+			<url>
+				dav:https://dav.muleforge.org/repository/${domainName}/
+			</url>
 		</repository>
 		<snapshotRepository>
 			<id>muleforge.webdav.snapshots</id>
-			<url>dav:https://dav.muleforge.org/snapshots.repository/${domainName}/</url>
+			<url>
+				dav:https://dav.muleforge.org/snapshots.repository/${domainName}/
+			</url>
 		</snapshotRepository>
 		<site>
 			<id>muleforge.webdav.sites</id>
@@ -138,7 +146,7 @@
 				<!-- configuration>
 					<threshold>Low</threshold>
 					<effort>Max</effort>
-				</configuration -->
+					</configuration -->
 			</plugin>
 		</plugins>
 	</reporting>
@@ -160,7 +168,7 @@
 			<version>${muleVersion}</version>
 			<scope>test</scope>
 		</dependency>
-	<!-- Mule Transport Dependencies -->
+		<!-- Mule Transport Dependencies -->
 		<dependency>
 			<groupId>org.mule.transports</groupId>
 			<artifactId>mule-transport-vm</artifactId>
@@ -181,5 +189,10 @@
 			<artifactId>mule-transport-stream</artifactId>
 			<version>${muleVersion}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.servingxml</groupId>
+			<artifactId>servingxml-core</artifactId>
+			<version>${servingXmlVersion}</version>
+		</dependency>
 	</dependencies>
-</project>		
+</project>
