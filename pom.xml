@@ -18,6 +18,10 @@
 	</properties>
 	<repositories>
 		<repository>
+			<id>mergere.m2</id>
+			<url>http://repo.mergere.com/maven2</url>
+		</repository>
+		<repository>
 			<id>servingxml-transformer.m2</id>
 			<url>http://users.telenet.be/kwestelinck/maven2</url>
 			<name>ServingXML transformer repository</name>
@@ -190,6 +194,12 @@
 			<groupId>com.servingxml</groupId>
 			<artifactId>servingxml</artifactId>
 			<version>${servingXmlVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>xmlunit</groupId>
+			<artifactId>xmlunit</artifactId>
+			<version>1.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
